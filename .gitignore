@@ -6,3 +6,16 @@ node_modules/
 .DS_Store
 dist/
 build/
+
+# next.js
+/out/
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# env files
+.env*.local
+
+# vercel
+.vercel
