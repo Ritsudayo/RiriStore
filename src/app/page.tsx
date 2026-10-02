@@ -1,20 +1,21 @@
+import { AboutShop } from "@/components/AboutShop";
+import { Announcements } from "@/components/Announcements";
+import { CategoryGrid } from "@/components/CategoryGrid";
+import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
-import { cn } from "@/lib/utils";
+import { HeroBanner } from "@/components/HeroBanner";
 
 export default function HomePage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main
-        className={cn(
-          "flex flex-1 flex-col items-center justify-center gap-4 px-6 text-center",
-        )}
-      >
-        <h1 className="text-4xl font-bold tracking-tight">RiriStore</h1>
-        <p className="text-neutral-500">
-          Интернет-магазин украшений ручной работы
-        </p>
+      <main className="flex flex-1 flex-col">
+        <HeroBanner />
+        <AboutShop />
+        <CategoryGrid />
+        <Announcements />
       </main>
+      <Footer />
     </div>
   );
 }
