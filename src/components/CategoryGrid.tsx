@@ -1,9 +1,4 @@
-const CATEGORIES = [
-  "Браслеты",
-  "Брелки",
-  "Чокеры",
-  "Вязаные изделия",
-] as const;
+import { CATEGORIES } from "@/lib/mock-data";
 
 export function CategoryGrid() {
   return (
@@ -11,11 +6,11 @@ export function CategoryGrid() {
       <div className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {CATEGORIES.map((category) => (
           <a
-            key={category}
-            href="#"
+            key={category.slug}
+            href={`/catalog/${category.slug}`}
             className="flex h-48 items-center justify-center rounded-xl border border-neutral-200 bg-white p-6 text-center text-xl font-semibold text-neutral-900 transition hover:border-neutral-300 lg:h-56"
           >
-            {category}
+            {category.name}
           </a>
         ))}
       </div>
